@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [project.diceTest]">
+  <test thread-count="5" verbose="0" name="Command line test(failed)">
+    <classes>
+      <class name="project.diceTest">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="SearchBox" invocation-numbers="0 1 2"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- project.diceTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [project.diceTest] -->

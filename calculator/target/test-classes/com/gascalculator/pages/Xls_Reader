@@ -1,0 +1,103 @@
+package com.gascalculator.testcases;
+
+import java.text.DecimalFormat;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.gascalculator.pages.GasCalculatorPage;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DDFTest {
+  
+  WebDriver driver;
+  
+  
+  
+  @BeforeMethod
+  public void setup() {
+    
+    WebDriverManager.chromedriver().setup();
+    driver=new ChromeDriver();
+    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    driver.manage().window().maximize();
+    driver.get("https://www.calculator.net/gas-mileage-calculator.html");
+  }
+  
+  @AfterMethod
+  public void closeup() {
+    driver.quit();
+  }
+  
+  @Test
+  public void calculateTest() {
+    
+    GasCalculatorPage calculataPage=new GasCalculatorPage(driver);
+    
+    double currentOr=3456;
+    double previousOr=2345;
+    double gas=30;
+    
+    calculataPage.currentOdometer.clear();
+    calculataPage.currentOdometer.sendKeys(String.valueOf(currentOr));
+    calculataPage.previousOdometer.clear();
+    calculataPage.previousOdometer.sendKeys(String.valueOf(previousOr));
+    calculataPage.gas.clear();
+    calculataPage.gas.sendKeys(String.valueOf(gas));
+    calculataPage.calculate.click();
+    
+    String[] actualResult = calculataPage.result.getText().split(" ");
+    System.out.println(actualResult[0]);
+    
+    double expectedResult = (currentOr-previousOr)/gas;
+    DecimalFormat df = new DecimalFormat("0.00");
+    String expectedResult2=String.valueOf(df.format(expectedResult));
+    
+    if(actualResult[0].equals(expectedResult2)) {
+      System.out.println("Pass");
+    }else {
+      System.out.println("Fail");
+    }
+    
+    
+    
+    
+    
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+}

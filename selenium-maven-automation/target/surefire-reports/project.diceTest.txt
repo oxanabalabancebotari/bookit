@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: project.diceTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 24.402 sec <<< FAILURE!
+SearchBox(project.diceTest)  Time elapsed: 0.011 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at project.diceTest.SearchBox(diceTest.java:47)
+
+SearchBox(project.diceTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at project.diceTest.SearchBox(diceTest.java:47)
+
+SearchBox(project.diceTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at project.diceTest.SearchBox(diceTest.java:47)
+
+closeBrowser(project.diceTest)  Time elapsed: 10.9 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-MMGRP4T', ip: '192.168.110.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:438)
+	at project.diceTest.closeBrowser(diceTest.java:29)
+

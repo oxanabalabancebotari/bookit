@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 13.592 sec <<< FAILURE!
+test(project.navigateDice)  Time elapsed: 0.007 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at project.navigateDice.test(navigateDice.java:30)
+
+test(project.navigateDice)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at project.navigateDice.test(navigateDice.java:30)
+
+test(project.navigateDice)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at project.navigateDice.test(navigateDice.java:30)
+

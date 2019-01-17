@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.bookit.tests.APIDay3">
+        <methods>
+          <include name="regionPOSTv2"/>
+          <include name="regionPOSTv1"/>
+          <include name="countryPUT"/>
+          <include name="countryDelete"/>
+          <include name="regionPOSTv4"/>
+        </methods>
+      </class> <!-- com.bookit.tests.APIDay3 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

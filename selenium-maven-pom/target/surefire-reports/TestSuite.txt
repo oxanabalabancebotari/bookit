@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.152 sec <<< FAILURE! - in TestSuite
+ProductTest(pomDesign.AllOrdersLoginPage)  Time elapsed: 1.37 sec  <<< FAILURE!
+java.lang.AssertionError: expected [$1000] but found [$100]
+	at pomDesign.AllOrdersLoginPage.ProductTest(AllOrdersLoginPage.java:92)
+
